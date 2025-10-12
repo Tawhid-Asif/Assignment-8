@@ -1,0 +1,218 @@
+[
+  {
+    "image": "/demo-app (1).webp",
+    "title": "TaskFlow Pro",
+    "companyName": "FlowWorks Inc.",
+    "id": 1,
+    "description": "An advanced task management app designed to boost productivity with smart reminders and collaboration tools.",
+    "size": 56,
+    "reviews": 2450,
+    "ratingAvg": 4.6,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1380 }
+    ]
+  },
+  {
+    "image": "/demo-app (2).webp",
+    "title": "FitBuddy",
+    "companyName": "Wellness Tech",
+    "id": 2,
+    "description": "Your personal fitness coach with daily workout routines, calorie tracking, and progress analytics.",
+    "size": 72,
+    "reviews": 1980,
+    "ratingAvg": 4.3,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 750 }
+    ]
+  },
+  {
+    "image": "/demo-app (3).webp",
+    "title": "NoteMaster",
+    "companyName": "BrightApps",
+    "id": 3,
+    "description": "A simple and elegant note-taking app with cloud sync, markdown support, and folder organization.",
+    "size": 35,
+    "reviews": 3240,
+    "ratingAvg": 4.8,
+    "downloads": 185000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 2400 }
+    ]
+  },
+  {
+    "image": "/demo-app (4).webp",
+    "title": "TravelGo",
+    "companyName": "Global Pathways",
+    "id": 4,
+    "description": "Plan trips, book hotels, and explore destinations with AI-based travel recommendations.",
+    "size": 89,
+    "reviews": 2780,
+    "ratingAvg": 4.4,
+    "downloads": 142000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1410 }
+    ]
+  },
+  {
+    "image": "/demo-app (5).webp",
+    "title": "PhotoFixer",
+    "companyName": "Pixel Studios",
+    "id": 5,
+    "description": "A lightweight photo editing app with AI auto-enhance, filters, and background remover.",
+    "size": 64,
+    "reviews": 4120,
+    "ratingAvg": 4.7,
+    "downloads": 210000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 2640 }
+    ]
+  },
+  {
+    "image": "/demo-app (6).webp",
+    "title": "BudgetWise",
+    "companyName": "FinGrow Labs",
+    "id": 6,
+    "description": "Track your expenses, manage budgets, and analyze spending patterns easily with BudgetWise.",
+    "size": 42,
+    "reviews": 1560,
+    "ratingAvg": 4.1,
+    "downloads": 78000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 380 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 430 }
+    ]
+  },
+  {
+    "image": "/demo-app(7).png",
+    "title": "EduSmart",
+    "companyName": "Learnify Ltd.",
+    "id": 7,
+    "description": "An online learning app offering video lessons, quizzes, and certification across multiple subjects.",
+    "size": 78,
+    "reviews": 3860,
+    "ratingAvg": 4.5,
+    "downloads": 168000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 2390 }
+    ]
+  },
+  {
+    "image": "/demo-app(8).png",
+    "title": "WeatherPlus",
+    "companyName": "SkyView Technologies",
+    "id": 8,
+    "description": "Stay updated with real-time weather data, radar maps, and severe weather alerts.",
+    "size": 51,
+    "reviews": 2120,
+    "ratingAvg": 4.2,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 850 }
+    ]
+  },
+  {
+    "image": "/demo-app(9).png",
+    "title": "GameZone",
+    "companyName": "PixelPlay",
+    "id": 9,
+    "description": "A gaming hub for mobile users — play trending games, earn rewards, and connect with friends.",
+    "size": 93,
+    "reviews": 4980,
+    "ratingAvg": 4.6,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 3160 }
+    ]
+  },
+  {
+    "image": "/demo-app(10).png",
+    "title": "Musicify",
+    "companyName": "SoundFlow",
+    "id": 10,
+    "description": "Stream music, create playlists, and enjoy high-quality audio with offline mode support.",
+    "size": 85,
+    "reviews": 5620,
+    "ratingAvg": 4.8,
+    "downloads": 340000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 4200 }
+    ]
+  },
+  {
+    "image": "/demo-app(11).png",
+    "title": "CookEase",
+    "companyName": "TastyByte Co.",
+    "id": 11,
+    "description": "Discover and save recipes, get cooking instructions, and auto-generate shopping lists.",
+    "size": 48,
+    "reviews": 1890,
+    "ratingAvg": 4.3,
+    "downloads": 92000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 820 }
+    ]
+  },
+  {
+    "image": "/demo-app(12).png",
+    "title": "SafeNet",
+    "companyName": "SecureTech",
+    "id": 12,
+    "description": "A cybersecurity and VPN app ensuring safe and encrypted browsing with one-tap protection.",
+    "size": 66,
+    "reviews": 2450,
+    "ratingAvg": 4.5,
+    "downloads": 130000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1210 }
+    ]
+  }
+]

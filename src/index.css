@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light , dark  , autumn --default;
+}
+
+nav a.active {
+    text-decoration: underline;
+    color: blue;
+}
+
+a.active {
+    text-decoration: underline;
+    color: blue;
+}
