@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link } from 'react-router';
 import ProductCard from '../components/ProductCard';
+import useProducts from '../hooks/useProducts';
 
 const Home = () => {
-    const products = useLoaderData()
-
+    const {products, loading, error} = useProducts()
+    const trendingP = products.slice(0, 8)
     return (
         <div className='my-8'>
             <div className='w-[50%] mx-auto'>
@@ -59,7 +60,7 @@ const Home = () => {
                 <div className='w-[80%] mx-auto'>
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-5 mt-5'>
                         {
-                            products.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
+                            trendingP.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
                         }
                     </div>
                 </div>

@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <Link to='https://github.com/Tawhid-Asif'>
-            <button className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><img src="/fi_2111432.svg" alt="" /> Contribute</button>
+            <button className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"><img src="/fi_2111432.svg" alt="" /> Contribute</button>
           </Link>
         </div>
       </div>
