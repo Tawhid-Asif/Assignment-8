@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router';
 import ProductCard from '../components/ProductCard';
 import useProducts from '../hooks/useProducts';
-import { ToastContainer } from 'react-toastify';
+import Loader from '../components/Loader';
+
+
+
 
 const Home = () => {
-    const {products, loading, error} = useProducts()
+     
+    const { products, loading } = useProducts()
     const trendingP = products.slice(0, 8)
     return (
         <div className='my-8'>
@@ -58,12 +62,16 @@ const Home = () => {
                     <h1 className='text-3xl font-bold'>Trending Apps</h1>
                     <p>Explore All Trending Apps on the Market developed by us</p>
                 </div>
-                <div className='w-[80%] mx-auto'>
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-5 mt-5'>
-                        {
-                            trendingP.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
-                        }
-                    </div>
+                <div className="w-[80%] mx-auto">
+                    {loading ? (
+                        <Loader count={8} />
+                    ) : (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+                            {trendingP.map((product) => (
+                                <ProductCard key={product.id} product={product} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
             <div className='text-center'>
@@ -72,7 +80,7 @@ const Home = () => {
                         <button>Show All</button></Link>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
+
         </div>
     );
 };

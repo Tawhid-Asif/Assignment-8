@@ -1,30 +1,59 @@
-import React from 'react';
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
 import useProducts from '../hooks/useProducts';
 import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { toast } from 'react-toastify';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const AppDetails = () => {
     const { id } = useParams()
-    const { products, loading, error } = useProducts()
-    const product = products.find(p => p.id == id)
-    if (loading) return <p>loading...</p>
-     
-    const { image, companyName, downloads, ratingAvg, reviews, title, size, description,ratings } = product || {}
+    const navigate = useNavigate()
+    const { products, loading } = useProducts()
+    const product = products.find(p => p.id == id);
+
+
+    const [isInstalled, setIsInstalled] = useState(false);
+
+    useEffect(() => {
+        const installedList = JSON.parse(localStorage.getItem("installationlist")) || [];
+        const alreadyInstalled = installedList.some(p => p.id === product?.id);
+        if (alreadyInstalled) setIsInstalled(true);
+    }, [product]);
+
+    useEffect(() => {
+        if (!loading && !product) {
+            navigate("/app-not-found");
+        }
+    }, [loading, product, navigate]);
+
+
+
+    if (loading) return <LoadingSpinner></LoadingSpinner>
+    if (!product) return null;
+
+    const { image, companyName, downloads, ratingAvg, reviews, title, size, description, ratings } = product || {}
 
     const handleAddToInstallation = () => {
-        const existingList = JSON.parse(localStorage.getItem("installationlist"))
-        let updatedList = []
+        const existingList = JSON.parse(localStorage.getItem("installationlist"));
+        let updatedList = [];
+
         if (existingList) {
-            const isDuplicate = existingList.some(p => p.id === product.id)
-            if (isDuplicate) return toast('Already installed!!!')
-            updatedList = [...existingList, product]
+            const isDuplicate = existingList.some(p => p.id === product.id);
+            if (isDuplicate) {
+                toast('Already installed!!!');
+                setIsInstalled(true);
+                return;
+            }
+            updatedList = [...existingList, product];
         } else {
-            updatedList.push(product)
+            updatedList.push(product);
         }
-        localStorage.setItem("installationlist", JSON.stringify(updatedList))
-        return toast('App installed!!!')
-    }
+
+        localStorage.setItem("installationlist", JSON.stringify(updatedList));
+        toast('App installed!!!');
+        setIsInstalled(true);
+    };
+
 
 
     return (
@@ -56,7 +85,15 @@ const AppDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={handleAddToInstallation} className='bg-[#00D390] px-3 py-1 text-white rounded-sm'>Install Now ({size} MB) </button>
+                        <button
+                            onClick={handleAddToInstallation}
+                            disabled={isInstalled}
+                            className={`px-3 py-1 rounded-sm text-white ${isInstalled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#00D390]'
+                                }`}
+                        >
+                            {isInstalled ? 'Installed' : `Install Now (${size} MB)`}
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -65,17 +102,17 @@ const AppDetails = () => {
                 <div className='h-80'>
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart
-                             
+
                             data={ratings}
-                             
+
                         >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
                             <Tooltip />
-                            <Legend/>
-                            <Bar dataKey="count" fill="#8884d8"  />
-                             
+                            <Legend />
+                            <Bar dataKey="count" fill="#8884d8" />
+
                         </BarChart>
                     </ResponsiveContainer>
                 </div>

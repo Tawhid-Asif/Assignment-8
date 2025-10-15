@@ -5,13 +5,15 @@ import Apps from "../pages/Apps";
 import Installation from "../pages/Installation";
 import ErrorPage from "../pages/ErrorPage";
 import AppDetails from "../pages/AppDetails";
+import LoadingSpinner from "../components/LoadingSpinner";
+import AppNotFound from "../pages/AppNotFound";
 
 const router = createBrowserRouter([
   {
     path:"/",
     element: <MainLayout></MainLayout>,
     errorElement:<ErrorPage></ErrorPage>,
-    hydrateFallbackElement:<p>loading...</p>,
+    hydratedFallbackElement:<LoadingSpinner></LoadingSpinner>,
     children:[
         {
             path:"/",
@@ -28,6 +30,9 @@ const router = createBrowserRouter([
         {
           path:"/app/:id",
           element: <AppDetails></AppDetails>
+        },
+        {
+          path: "/app-not-found", element: <AppNotFound />
         }
     ]
 
