@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import ProductCard from '../components/ProductCard';
 import useProducts from '../hooks/useProducts';
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     const {products, loading, error} = useProducts()
@@ -71,6 +72,7 @@ const Home = () => {
                         <button>Show All</button></Link>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
